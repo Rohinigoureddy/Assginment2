@@ -13,7 +13,7 @@
         "kind": 5,
         "importPath": "boto_list",
         "description": "boto_list",
-        "peekOfCode": "session = boto3.Session( \n         aws_access_key_id='AKIASH7DDKUJK3RDBDKJ', \n         aws_secret_access_key='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')\ns3 = session.resource('s3')\nf= open(\"list\",'x')\nfor bucket in s3.buckets.all():\n  print(bucket.name)\n  b=str(bucket.name)\nf.write(b)",
+        "peekOfCode": "session = boto3.Session( \n         aws_access_key_id='AKIASH7DDKUJK3RDBDKJ', \n         aws_secret_access_key='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')\ns3 = session.resource('s3')\nresponse = s3.buckets.all()\nf= open(\"list\",'x')\nfor bucket in response:\n  print(bucket.name)\n  b=str(bucket.name)\nf.write(b)",
         "detail": "boto_list",
         "documentation": {}
     },
@@ -22,7 +22,16 @@
         "kind": 5,
         "importPath": "boto_list",
         "description": "boto_list",
-        "peekOfCode": "s3 = session.resource('s3')\nf= open(\"list\",'x')\nfor bucket in s3.buckets.all():\n  print(bucket.name)\n  b=str(bucket.name)\nf.write(b)",
+        "peekOfCode": "s3 = session.resource('s3')\nresponse = s3.buckets.all()\nf= open(\"list\",'x')\nfor bucket in response:\n  print(bucket.name)\n  b=str(bucket.name)\nf.write(b)",
+        "detail": "boto_list",
+        "documentation": {}
+    },
+    {
+        "label": "response",
+        "kind": 5,
+        "importPath": "boto_list",
+        "description": "boto_list",
+        "peekOfCode": "response = s3.buckets.all()\nf= open(\"list\",'x')\nfor bucket in response:\n  print(bucket.name)\n  b=str(bucket.name)\nf.write(b)",
         "detail": "boto_list",
         "documentation": {}
     }
