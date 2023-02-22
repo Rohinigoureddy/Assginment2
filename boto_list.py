@@ -1,8 +1,8 @@
 import boto3
 
 session = boto3.Session( 
-         aws_access_key_id='IAM_User2', 
-         aws_secret_access_key='Medhareddy@16')
+         aws_access_key_id='AKIASH7DDKUJK3RDBDKJ', 
+         aws_secret_access_key='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')
 
 s3 = session.resource('s3')
 
