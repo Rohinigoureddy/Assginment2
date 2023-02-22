@@ -6,8 +6,10 @@ session = boto3.Session(
 
 s3 = session.resource('s3')
 
+f= open("listtxt1",'x')
+
 for bucket in s3.buckets.all():
   print(bucket.name)
   b=str(bucket.name)
-  f= open("listtxt",'x')
+  
 f.write(b)
