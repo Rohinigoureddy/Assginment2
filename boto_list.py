@@ -1,10 +1,10 @@
 import boto3
 
-session = boto3.Session( aws_access_key_id='Rohini14', aws_secret_access_key='Medha@16')
+ata_string = "This is a random string."
 
-s3 = session.resource('s3')
+s3 = boto3.resource('s3')
 
-my_bucket = s3.Bucket('Rohini')
-
-for my_bucket_object in my_bucket.objects.all():
-    print(my_bucket_object.key)
+object = s3.Object(
+    bucket_name='Rohini-bucket', 
+    key='output.txt'
+)
