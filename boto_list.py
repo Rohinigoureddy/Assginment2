@@ -1,10 +1,6 @@
 import boto3
+s3_resource = boto3.resource('s3')
+s3_resource.create_bucket(Bucket="aws-rohini")
 
-ata_string = "This is a random string."
-
-s3 = boto3.resource('s3')
-
-object = s3.Object(
-    bucket_name='Rohini-bucket', 
-    key='output.txt'
-)
+for bucket in s3_resource.buckets.all():
+    print(bucket.name)
