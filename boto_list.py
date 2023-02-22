@@ -6,7 +6,7 @@ session = boto3.Session(
 
 s3 = session.resource('s3')
 
-f= open("listtxt1",'x')
+f= open("list",'x')
 
 for bucket in s3.buckets.all():
   print(bucket.name)
