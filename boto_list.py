@@ -1,10 +1,10 @@
 import boto3
 
-s3 = boto3.client('s3')
+session = boto3.Session( aws_access_key_id='Rohini14', aws_secret_access_key='Medha@16')
 
-response = s3.list_buckets()
+s3 = session.resource('s3')
 
-with open('bucket_names.txt', 'w') as f:
-   
-    for bucket in response['Buckets']:
-        f.write(bucket['Name'] + '\n')
+my_bucket = s3.Bucket('Rohini')
+
+for my_bucket_object in my_bucket.objects.all():
+    print(my_bucket_object.key)
