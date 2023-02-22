@@ -1,0 +1,38 @@
+[
+    {
+        "label": "boto3",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "boto3",
+        "description": "boto3",
+        "detail": "boto3",
+        "documentation": {}
+    },
+    {
+        "label": "session",
+        "kind": 5,
+        "importPath": "boto_list",
+        "description": "boto_list",
+        "peekOfCode": "session = boto3.Session( \n         aws_access_key_id='IAM_User2', \n         aws_secret_access_key='Medhareddy@16')\ns3 = session.resource('s3')\nfor bucket in s3.buckets.all():\n  print(bucket.name)\n  b=str(bucket.name)\n  f= open(\"listtxt\",'x')\nf.write(b)",
+        "detail": "boto_list",
+        "documentation": {}
+    },
+    {
+        "label": "s3",
+        "kind": 5,
+        "importPath": "boto_list",
+        "description": "boto_list",
+        "peekOfCode": "s3 = session.resource('s3')\nfor bucket in s3.buckets.all():\n  print(bucket.name)\n  b=str(bucket.name)\n  f= open(\"listtxt\",'x')\nf.write(b)",
+        "detail": "boto_list",
+        "documentation": {}
+    },
+    {
+        "label": "session",
+        "kind": 5,
+        "importPath": "cred",
+        "description": "cred",
+        "peekOfCode": "session = boto3.Session( aws_access_key_id='Rohini14', aws_secret_access_key='Medha@16')",
+        "detail": "cred",
+        "documentation": {}
+    }
+]
